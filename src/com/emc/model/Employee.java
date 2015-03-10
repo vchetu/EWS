@@ -13,16 +13,42 @@ public class Employee {
 	@Column(name="emp_id")
 	private int employeeID;
 	private String name;
+	private String managerName;
+	private String team;
 	private String workspaceID;
-	private String shiftType;
+	private String shiftStart;
+	private String shiftEnd;
 	
-		
-	public String getShiftType() {
-		return shiftType;
+	public String getShiftStart() {
+		return shiftStart;
 	}
 
-	public void setShiftType(String shiftType) {
-		this.shiftType = shiftType;
+	public void setShiftStart(String shiftStart) {
+		this.shiftStart = shiftStart;
+	}
+
+	public String getShiftEnd() {
+		return shiftEnd;
+	}
+
+	public void setShiftEnd(String shiftEnd) {
+		this.shiftEnd = shiftEnd;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
+	public String getManagerName() {
+		return managerName;
+	}
+
+	public void setManagerName(String managerName) {
+		this.managerName = managerName;
 	}
 
 	public int getEmployeeID() {
@@ -49,12 +75,16 @@ public class Employee {
 		this.workspaceID = workspaceID;
 	}
 
-	public Employee(int employeeID, String name, String workspaceID, String shiftType) {
+	public Employee(int employeeID, String name, String managerName,
+			String team, String workspaceID, String shiftStart, String shiftEnd) {
 		super();
 		this.employeeID = employeeID;
 		this.name = name;
+		this.managerName = managerName;
+		this.team = team;
 		this.workspaceID = workspaceID;
-		this.shiftType = shiftType;
+		this.shiftStart = shiftStart;
+		this.shiftEnd = shiftEnd;
 	}
 
 	public Employee() {

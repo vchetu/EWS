@@ -16,7 +16,7 @@ app.run(function($rootScope) {
 
 app.controller('EWScontroller', function($scope, $http) {
 			
-			var url = 'http://10.63.38.81:8080/EmployeeWorkSpace/rest/employee/';
+			var url = 'http://ews.apps.titan.lab.emc.com/rest/employee/';
 
 			$scope.newEmployee = {};
 			

@@ -22,13 +22,11 @@
 				<div class="modal-body">
 					Employee ID : <input type="text" class="form-control" ng-model="newEmployee.employeeID">
 					Name : <input type="text" class="form-control" ng-model="newEmployee.name">
+					Manager Name : <input type="text" class="form-control" ng-model="newEmployee.managerName">
+					Team : <input type="text" class="form-control" ng-model="newEmployee.team">
 					Workspace ID : <input type="text" class="form-control" ng-model="newEmployee.workspaceID">
-					Shift : <select class="form-control" ng-model="newEmployee.shiftType">
-							  <option value="North America">North America</option>
-							  <option value="EMEA">EMEA</option>
-							  <option value="APJ">APJ</option>
-							  <option value="Latina America">Latina America</option>
-							</select>
+					Shift Starts : <input type="text" class="form-control" ng-model="newEmployee.shiftStart">
+					Shift ends : <input type="text" class="form-control" ng-model="newEmployee.shiftEnd">
 				</div>
 				<div class="modal-footer">
 					<button class="btn btn-primary" ng-click="ok()">Add</button>
@@ -43,13 +41,11 @@
 				<div class="modal-body">
 					Employee ID : <input type="text" class="form-control" ng-model="editEmployee.employeeID">
 					Name : <input type="text" class="form-control" ng-model="editEmployee.name">
+					Manager Name : <input type="text" class="form-control" ng-model="editEmployee.managerName">
+					Team : <input type="text" class="form-control" ng-model="editEmployee.team">
 					Workspace ID : <input type="text" class="form-control" ng-model="editEmployee.workspaceID">
-					Shift : <select class="form-control" ng-model="editEmployee.shiftType">
-							  <option value="North America">North America</option>
-							  <option value="EMEA">EMEA</option>
-							  <option value="APJ">APJ</option>
-							  <option value="Latina America">Latina America</option>
-							</select>
+					Shift Starts : <input type="text" class="form-control" ng-model="editEmployee.shiftStart">
+					Shift ends : <input type="text" class="form-control" ng-model="editEmployee.shiftEnd">
 				</div>
 				<div class="modal-footer">
 					<button class="btn btn-primary" ng-click="ok()">Update</button>
@@ -79,16 +75,22 @@
 						<tr>
 							<th>Employee ID</th>
 							<th>Name</th>
+							<th>Manager Name</th>
 							<th>Workspace ID</th>
-							<th>Shift Type</th>
+							<th>Team</th>
+							<th>Shift Starts</th>
+							<th>Shift Ends</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="employee in employees | filter: searchTerm" ng-click="setSelected(employee)">
 							<td>{{employee.employeeID}}</td>
 							<td>{{employee.name}}</td>
+							<td>{{employee.managerName}}</td>
 							<td>{{employee.workspaceID}}</td>
-							<td>{{employee.shiftType}}</td>
+							<td>{{employee.team}}</td>
+							<td>{{employee.shiftStart}}</td>
+							<td>{{employee.shiftEnd}}</td>
 						</tr>
 					</tbody>
 				</table>
