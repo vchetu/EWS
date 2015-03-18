@@ -17,7 +17,9 @@ app.run(function($rootScope) {
 app.controller('EWScontroller', function($scope, $http) {
 			
 			var url = 'http://ews.apps.titan.lab.emc.com/rest/employee/';
-
+			$scope.orderByField = 'employeeID';
+			$scope.reverseSort = false;
+			
 			$scope.newEmployee = {};
 			
 			$scope.getEmployees = function(){
